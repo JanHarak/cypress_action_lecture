@@ -8,4 +8,9 @@ describe("Cypress GitHub actions demo", () => {
   it("Open Page", () => {
     cy.visit("http://tredgate.com/pmtool");
   });
+
+  it("Check header", () => {
+    cy.visit("http://tredgate.com/pmtool");
+    cy.get(".form-title").should("be.visible");
+  });
 });
